@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>حلبة الحروف</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Cairo:wght@400;700;800&family=Lalezar&family=Aref+Ruqaa:wght@700&family=Noto+Naskh+Arabic:wght@400;700&family=Changa:wght@400;700;800&display=swap">
+<title>حلبة الحروف</title>
+<meta name="description" content="حلبة الحروف: ألعاب عربية جماعية — خلية الحروف وإنسان حيوان نبات، على جهاز واحد أو أونلاين مع الأصدقاء">
+<meta name="theme-color" content="#0b0d12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%B6%3C/text%3E%3C/svg%3E">
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Cairo:wght@400;700;800&family=Lalezar&family=Aref+Ruqaa:wght@700&family=Noto+Naskh+Arabic:wght@400;700&family=Changa:wght@400;700;800&display=swap">
 <style>
 :root{--bg:#0b0d12;--fg:#f2f5fa;--card:#151922;--cardm:#151922;--mut:#9aa3b6;--ol:#2e3750;--cf:#1c2230;--ct:#e6ebf5;--acc:#ffd166;--ff:'Tajawal';--tf:'Tajawal';--bb:#151922;--bt:#f2f5fa;--rad:11px;--pn:#151922;--bx:0 0 0 1px #242a38;--a:#ff6b4a;--b:#2ee6a6;--ot:#0b0d12;--fr:none;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body::after{content:"";position:fixed;inset:0;pointer-events:none;box-shadow:var(--fr);z-index:3}
@@ -65,15 +69,19 @@ body.cl #ov .btn,body.cl #ov .x,body.cl #rs .btn,body.cl #rs .chip{display:none}
 [data-theme=bento] #home .big2,[data-theme=neon] #home .big2{margin:0;min-height:130px;font-size:24px;text-align:right}
 [data-theme=bento] #home .big2:first-of-type,[data-theme=neon] #home .big2:first-of-type{grid-column:1/-1;min-height:160px;font-size:36px}
 .ai{width:100%;margin:2px 0}.ht{width:100%;border-collapse:collapse;font-size:13px}.ht td,.ht th{border:var(--bw,1px) solid var(--ol);padding:4px 3px;text-align:center}.ht td.x{opacity:.5;text-decoration:line-through}.ht .p{display:block;font-size:11px;color:var(--acc)}.lg2{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:8px}.lg2 .chip{font-size:20px;padding:8px 0}
+[data-theme=bento] #gm,[data-theme=neon] #gm{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+[data-theme=bento] #gm .lbl,[data-theme=neon] #gm .lbl,[data-theme=bento] #gmm,[data-theme=neon] #gmm{grid-column:1/-1}
+[data-theme=bento] #gm .big2,[data-theme=neon] #gm .big2{margin:0;min-height:190px;font-size:24px;text-align:right}
 </style></head><body>
 <header id="top"><button class="ib" id="thb" onclick="openThemes()" aria-label="تغيير التصميم"><svg viewBox="0 0 24 24"><path d="M12 3C7 3 3 7 3 12s4 9 8.5 9c1.6 0 2-1 1.3-2-.7-1-.3-2.3 1-2.3H17c2.6 0 4-1.7 4-4 0-4.5-4-8.7-9-8.7z" style="fill:none;stroke:currentColor;stroke-width:1.7"/><circle cx="8" cy="11" r="1.8" style="fill:var(--a)"/><circle cx="12" cy="7.5" r="1.8" style="fill:var(--b)"/><circle cx="16" cy="11" r="1.8" style="fill:var(--acc)"/></svg></button><h1><svg class="lg" viewBox="0 0 200 200" role="img" aria-label="شعار حلبة الحروف"><circle cx="100" cy="100" r="92" style="fill:none;stroke:var(--acc);stroke-width:7"/><circle cx="100" cy="100" r="82" style="fill:none;stroke:var(--ol);stroke-width:1.5"/><polygon points="100.0,74.6 122.0,87.3 122.0,112.7 100.0,125.4 78.0,112.7 78.0,87.3" style="fill:var(--cf);stroke:var(--ol);stroke-width:2.5"/><polygon points="146.0,74.6 168.0,87.3 168.0,112.7 146.0,125.4 124.0,112.7 124.0,87.3" style="fill:var(--b)"/><polygon points="54.0,74.6 76.0,87.3 76.0,112.7 54.0,125.4 32.0,112.7 32.0,87.3" style="fill:var(--b)"/><polygon points="123.0,34.8 145.0,47.5 145.0,72.9 123.0,85.6 101.0,72.9 101.0,47.5" style="fill:var(--a)"/><polygon points="77.0,34.8 99.0,47.5 99.0,72.9 77.0,85.6 55.0,72.9 55.0,47.5" style="fill:var(--a)"/><polygon points="123.0,114.4 145.0,127.1 145.0,152.5 123.0,165.2 101.0,152.5 101.0,127.1" style="fill:var(--a)"/><polygon points="77.0,114.4 99.0,127.1 99.0,152.5 77.0,165.2 55.0,152.5 55.0,127.1" style="fill:var(--a)"/><path d="M110.0 91.4Q102.6 91.0 98.3 94.5Q93.9 98.0 93.9 102.4Q93.9 105.1 96.2 107.4Q98.1 109.4 103.3 109.4Q109.9 109.4 114.4 106.0Q114.4 106.0 114.4 112.1Q110.8 115.0 103.4 115.0Q93.9 115.0 89.5 110.6Q86.1 107.3 86.1 102.4Q86.1 98.5 89.1 94.7Q91.4 92.0 95.7 90.3Q93.9 90.2 90.6 90.7Q87.7 91.1 85.6 92.0Q85.6 92.0 85.6 86.4Q91.5 85.0 95.9 85.0Q103.6 85.0 110.0 85.8Q110.0 85.8 110.0 91.4Z" style="fill:var(--ct)"/></svg> حلبة الحروف</h1><button class="ib" id="homeb" onclick="toStart()" aria-label="الرئيسية" title="الرئيسية" style="visibility:hidden"><svg viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></button></header>
-<div id="home" class="sec cd"><div class="lbl" style="text-align:center">اختر طريقة اللعب</div>
+<div id="gm" class="sec cd"><div class="lbl" style="text-align:center">اختر اللعبة</div><button class="btn big2" onclick="show('home')"><svg viewBox="0 0 24 24" width="26" height="26" style="vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round"><polygon points="12,3 20,7.5 20,16.5 12,21 4,16.5 4,7.5"/><polygon points="12,8 15.5,10 15.5,14 12,16 8.5,14 8.5,10"/></svg> خلية الحروف<small>فريقان يتنافسان على ربط الخلايا بالأسئلة</small></button><button class="btn big2" onclick="ihMenu()"><svg viewBox="0 0 24 24" width="26" height="26" style="vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg> إنسان حيوان نبات<small>أونلاين — كل لاعب يكتب إجاباته</small></button><div id="gmm" class="cap"></div></div>
+<div id="home" class="sec cd" style="display:none"><div class="lbl" style="text-align:center">خلية الحروف — اختر طريقة اللعب</div>
 <button class="btn big2" onclick="show('ol')"><svg viewBox="0 0 24 24" width="22" height="22" style="vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg> أونلاين<small>العب مع أصدقائك برمز غرفة</small></button>
-<button class="btn big2" onclick="goLocal()"><svg viewBox="0 0 24 24" width="22" height="22" style="vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg> صالة البيت<small>العب على نفس الجهاز</small></button><button class="btn big2" onclick="ihMenu()">إنسان حيوان نبات<small>أونلاين فقط — كل جولة يختار لاعب الحرف</small></button><div id="hm" class="cap"></div></div>
+<button class="btn big2" onclick="goLocal()"><svg viewBox="0 0 24 24" width="22" height="22" style="vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg> صالة البيت<small>العب على نفس الجهاز</small></button><div id="hm" class="cap"></div></div>
 <div id="ol" class="sec cd" style="display:none"><div class="lbl" style="text-align:center">اللعب أونلاين</div>
 <button class="btn big2" onclick="goHost()">إنشاء غرفة (مقدّم)<small>تشارك الرمز مع الفريقين والمشاهدين</small></button>
 <button class="btn big2" onclick="show('jn')">الانضمام برمز<small>فريق أو مشاهد</small></button>
-<div class="cap">يتطلب الأونلاين أن يكون كل لاعب مسجّلًا الدخول ولديه صلاحية فتح هذه الصفحة.</div></div>
+<div class="cap">اللعب أونلاين يتم مباشرة بين الأجهزة، وكل لاعب يحتاج اتصالًا بالإنترنت. شارك رمز الغرفة مع أصدقائك.</div></div>
 <div id="jn" class="sec cd" style="display:none"><div class="lbl">رمز الغرفة</div><input id="jc" maxlength="5" placeholder="مثال: k7m2q" dir="ltr" autocomplete="off"><button class="btn go" style="width:100%;margin-top:10px" onclick="joinCheck()">تحقق</button><div id="jm" class="cap"></div>
 <div id="jr" style="display:none"><div class="lbl">أنا</div><div class="chips" id="jrc"></div><div id="jt"><input id="jnm" maxlength="14" placeholder="اكتب اسم الفريق"><div class="sw" id="jsw"></div></div><button class="btn go" style="width:100%" onclick="joinGo()">انضم</button></div></div>
 <div id="lb" class="sec cd" style="display:none"><div class="lbl">رمز الغرفة</div><div id="lc" class="code"></div><button class="chip" onclick="copyCode()">نسخ الرمز</button><div id="ll" style="margin-top:12px"></div><button class="btn go" id="lbs" style="width:100%;margin-top:8px" onclick="hostStart()">ابدأ اللعبة</button><div id="lbm" class="cap"></div></div>
@@ -168,7 +176,7 @@ function begin(){
   P={};Object.keys(D).forEach(k=>D[k].forEach(s=>{const[q,a]=s.split('|');(P[lt(a)]=P[lt(a)]||[]).push([q,a,k])}));
   NM.A=$('inA').value.trim()||'الفريق الأول';NM.B=$('inB').value.trim()||'الفريق الثاني';const rt=document.documentElement.style;rt.setProperty('--a',CA);rt.setProperty('--b',CB);show('game');newMatch();
 }
-function toStart(){leaveRoom();['ov','rs','fx'].forEach(k=>$(k).classList.remove('on'));show('home');chips()}
+function toStart(){leaveRoom();['ov','rs','fx'].forEach(k=>$(k).classList.remove('on'));show('gm');chips()}
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function newGame(){
   const ls=FC?[]:shuffle(Object.keys(P));cells=FC?FC:(()=>{const c=[];for(let i=0;i<N*N;i++)c.push(ls[i%ls.length]);return c})();
@@ -228,7 +236,7 @@ function startWelcome(){$('wl').classList.remove('on');openThemes()}
 const PLAYI='<svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:middle;fill:currentColor"><path d="M7 4l13 8-13 8z"/></svg>';
 let ON=0,HOST=0,RM=null,CODE='',PH='lobby',SL={A:null,B:null},Qs=null,RSd=null,LP={},nspec=0,SM='local',MYR='S',JR='S',JC=COL[0],GS=null,JOINED=0,JT=0,CC='',FC=null,PN=0;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function show(id){['home','start','ol','jn','lb','game','ihm','ih'].forEach(k=>$(k).style.display=k==id?'':'none');$('homeb').style.visibility=id=='home'?'hidden':'visible'}
+function show(id){['gm','home','start','ol','jn','lb','game','ihm','ih'].forEach(k=>$(k).style.display=k==id?'':'none');$('homeb').style.visibility=id=='gm'?'hidden':'visible'}
 function goLocal(){SM='local';showStart()}
 function goHost(){SM='host';showStart()}
 function showStart(){$('tms').style.display=SM=='host'?'none':'';$('gob').innerHTML=PLAYI+' '+(SM=='host'?'إنشاء الغرفة':'ابدأ اللعب');show('start');chips()}
@@ -237,11 +245,56 @@ function buildP(){P={};Object.keys(D).forEach(k=>D[k].forEach(s=>{const[q,a]=s.s
 function leaveRoom(){ihLeave();try{RM&&RM.leave()}catch(e){}RM=null;ON=0;HOST=0;JOINED=0;GS=null;CC='';Qs=null;RSd=null;MYR='S';document.body.classList.remove('cl')}
 function snap(){return{ph:PH,sl:SL,N:N,RN:RN,round:round,rw:rw,o:(owner||[]).map(x=>x||'-').join(''),c:(cells||[]).join(''),turn:turn,over:over?1:0,NM:NM,CA:CA,CB:CB,q:Qs,rs:RSd,nS:nspec}}
 function pub(){if(ON&&HOST&&RM)RM.presence({g:snap()}).catch(()=>{})}
-async function getRoom(){try{return typeof claude!='undefined'?await claude.use('room'):null}catch(e){return null}}
+const ICE=[{urls:'stun:stun.l.google.com:19302'},{urls:'stun:global.stun.twilio.com:3478'},{urls:'turn:openrelay.metered.ca:80',username:'openrelayproject',credential:'openrelayproject'},{urls:'turn:openrelay.metered.ca:443',username:'openrelayproject',credential:'openrelayproject'},{urls:'turn:openrelay.metered.ca:443?transport=tcp',username:'openrelayproject',credential:'openrelayproject'}];
+function peerRoom(name,host){
+  return new Promise((resolve,reject)=>{
+    if(typeof Peer=='undefined'){reject(new Error('nopeer'));return}
+    let me=null,conn=null,snap={},prev={},cbs=[],conns={},tm=null,seq=0;const pres={},upd={};
+    const cfg={config:{iceServers:ICE}};
+    const P=host?new Peer('halbat-'+name,cfg):new Peer(undefined,cfg);
+    const api={
+      peers(){return Object.keys(snap).map(id=>({peer:id,presence:snap[id].p||{},updatedAt:snap[id].u||0,isMe:id===me,sameTab:id===me}))},
+      onPeers(cb){cbs.push(cb);setTimeout(()=>{const o=api.peers();if(o.length)cb({joined:o,updated:[],left:[]})},0)},
+      presence(v){if(host)setPres(me,v);else if(conn&&conn.open)conn.send({t:'p',v:v});return Promise.resolve()},
+      leave(){try{P.destroy()}catch(e){}}
+    };
+    function emit(){
+      const o=api.peers(),ids={},ch={joined:[],updated:[],left:[]};
+      o.forEach(p=>{ids[p.peer]=1;if(!(p.peer in prev))ch.joined.push(p);else if(prev[p.peer]!==p.updatedAt)ch.updated.push(p)});
+      Object.keys(prev).forEach(id=>{if(!ids[id])ch.left.push({peer:id,presence:{},isMe:false,sameTab:false})});
+      prev={};o.forEach(p=>prev[p.peer]=p.updatedAt);
+      if(ch.joined.length||ch.updated.length||ch.left.length)cbs.forEach(cb=>{try{cb(ch)}catch(e){console.error(e)}})
+    }
+    function bc(){clearTimeout(tm);tm=setTimeout(()=>{const s={};Object.keys(pres).forEach(id=>s[id]={p:pres[id],u:upd[id]});snap=s;emit();Object.keys(conns).forEach(id=>{const c=conns[id];if(c.open)c.send({t:'s',s:s})})},40)}
+    function setPres(id,v){if(!v||typeof v!='object')return;pres[id]=Object.assign({},pres[id]||{},v);upd[id]=++seq;bc()}
+    P.on('error',e=>{reject(e)});
+    if(host){
+      P.on('open',id=>{me=id;pres[me]={};upd[me]=++seq;bc();resolve(api)});
+      P.on('connection',c=>{
+        c.on('open',()=>{conns[c.peer]=c;pres[c.peer]={};upd[c.peer]=++seq;bc()});
+        c.on('data',d=>{if(d&&d.t=='p')setPres(c.peer,d.v)});
+        c.on('close',()=>{delete conns[c.peer];delete pres[c.peer];delete upd[c.peer];bc()});
+        c.on('error',()=>{})})
+    }else{
+      P.on('open',id=>{me=id;conn=P.connect('halbat-'+name,{reliable:true});
+        conn.on('open',()=>resolve(api));
+        conn.on('data',d=>{if(d&&d.t=='s'){snap=d.s||{};emit()}});
+        conn.on('close',()=>{snap={};emit()});
+        conn.on('error',()=>{})})
+    }
+  })
+}
+async function getRoom(){
+  try{
+    if(typeof claude!='undefined')return await claude.use('room');
+    if(typeof Peer!='undefined')return{join:(n,o)=>peerRoom(n,!!(o&&o.host))};
+  }catch(e){}
+  return null
+}
 async function hostCreate(){
   const a='abcdefghjkmnpqrstuvwxyz23456789';CODE='';for(let i=0;i<5;i++)CODE+=a[Math.floor(Math.random()*a.length)];
-  const R=await getRoom();if(!R){alert('الأونلاين غير متاح هنا: يلزم تسجيل الدخول ومشاركة الرابط معك.');return}
-  try{RM=await R.join('hq'+CODE)}catch(e){alert('تعذّر إنشاء الغرفة، حاول مرة أخرى.');return}
+  const R=await getRoom();if(!R){alert('تعذّر الاتصال بخدمة الأونلاين، تأكد من الإنترنت وحاول مجددًا.');return}
+  try{RM=await R.join('hq'+CODE,{host:true})}catch(e){alert('تعذّر إنشاء الغرفة، حاول مرة أخرى.');return}
   ON=1;HOST=1;PH='lobby';SL={A:null,B:null};LP={};NM={A:'الفريق الأول',B:'الفريق الثاني'};owner=null;cells=null;rwin=null;
   RM.presence({role:'host',code:CODE});RM.onPeers(hostPeers);show('lb');renderLobby(snap());pub();
 }
@@ -259,7 +312,7 @@ function hostPeers(ch){
 }
 function renderLobby(g){
   $('lc').textContent=CODE.toUpperCase();
-  $('ll').innerHTML=['A','B'].map(t=>'<div class="lr"><i style="background:'+(t=='A'?g.CA:g.CB)+'"></i><span>'+(g.sl[t]?esc(g.NM[t]):'بانتظار '+(t=='A'?'الفريق الأول':'الفريق الثاني'))+'</span></div>').join('')+'<div class="lr"><span>المشاهدون: '+(+g.nS||0)+'</span></div>';
+  $('ll').innerHTML=['A','B'].map(t=>'<div class="lr"><i style="background:'+(COL.includes(t=='A'?g.CA:g.CB)?(t=='A'?g.CA:g.CB):'#888')+'"></i><span>'+(g.sl[t]?esc(g.NM[t]):'بانتظار '+(t=='A'?'الفريق الأول':'الفريق الثاني'))+'</span></div>').join('')+'<div class="lr"><span>المشاهدون: '+(+g.nS||0)+'</span></div>';
   $('lbs').style.display=HOST?'':'none';$('lbs').disabled=!(g.sl.A&&g.sl.B);$('lbm').textContent=HOST?'عندما ينضم الفريقان اضغط ابدأ اللعبة':'بانتظار المقدّم لبدء اللعبة…';
 }
 function copyCode(){try{navigator.clipboard.writeText(CODE.toUpperCase())}catch(e){}}
@@ -267,8 +320,8 @@ function hostStart(){if(!(SL.A&&SL.B))return;buildP();PH='play';document.body.cl
 async function joinCheck(){
   CODE=$('jc').value.trim().toLowerCase();if(CODE.length<4){$('jm').textContent='اكتب رمز الغرفة';return}
   $('jm').textContent='جارٍ البحث…';GS=null;
-  const R=await getRoom();if(!R){$('jm').textContent='الأونلاين غير متاح: يلزم تسجيل الدخول ومشاركة الرابط معك.';return}
-  try{RM=await R.join('hq'+CODE)}catch(e){$('jm').textContent='تعذّر الدخول للغرفة';return}
+  const R=await getRoom();if(!R){$('jm').textContent='تعذّر الاتصال بخدمة الأونلاين، تأكد من الإنترنت.';return}
+  try{RM=await R.join('hq'+CODE)}catch(e){$('jm').textContent=e&&e.type=='peer-unavailable'?'لا توجد غرفة بهذا الرمز':'تعذّر الدخول للغرفة';return}
   ON=1;HOST=0;RM.presence({role:'J'});RM.onPeers(clientPeers);
   setTimeout(()=>{if(!GS&&!JOINED)$('jm').textContent='لا توجد غرفة بهذا الرمز'},5000);
 }
@@ -310,11 +363,11 @@ function applySnap(g){
     if(!$('rs').classList.contains('on')){$('rs').classList.add('on');if(w)confetti()}}else $('rs').classList.remove('on');
 }
 const ICAT=['إنسان','حيوان','نبات','جماد','بلاد'],ILET='ابتثجحخدذرزسشصضطظعغفقكلمنهوي';
-let IR=null,IHOST=0,IG=null,IMY='',ICODE='',IN='',ITOT=5,IDUR=60,IAns=['','','','',''],IHA=IAns,ILK='',IKEY='',IT0=0,IFT=null,IFin=0,IDB=null;
+let IR=null,IHOST=0,IG=null,IMY='',ICODE='',IN='',ITOT=5,IDUR=60,IAns=['','','','',''],IHA=IAns,ILK='',IKEY='',IT0=0,IFT=null,IFin=0,IDB=null,IVT=[],IRdy='';
 const ihNorm=s=>String(s||'').replace(/[\u064B-\u0652\u0640]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').trim().replace(/^ال(?=.{2})/,'');
 const ihOk=(a,l)=>{const n=ihNorm(a);return n.length>0&&n[0]==ihNorm(l)[0]};
 function ihMenu(){ihOpt();show('ihm')}
-function ihOpt(){const f=(a,v,s)=>a.map(x=>'<button class="chip'+(x==v?' on':'')+'" onclick="'+s+'('+x+')">'+x+'</button>').join('');$('iho').innerHTML='<div class="lbl">عدد الجولات (للمقدّم)</div><div class="chips">'+f([3,5,8],ITOT,'ihSet')+'</div><div class="lbl">مدة الكتابة بالثواني</div><div class="chips">'+f([45,60,90],IDUR,'ihSetD')+'</div>'}
+function ihOpt(){const f=(a,v,s)=>a.map(x=>'<button class="chip'+(x==v?' on':'')+'" onclick="'+s+'('+x+')">'+x+'</button>').join('');$('iho').innerHTML='<div class="lbl">عدد الجولات (لمن ينشئ الغرفة)</div><div class="chips">'+f([3,5,8],ITOT,'ihSet')+'</div><div class="lbl">مدة الكتابة بالثواني</div><div class="chips">'+f([45,60,90],IDUR,'ihSetD')+'</div>'}
 function ihSet(x){ITOT=x;ihOpt()}
 function ihSetD(x){IDUR=x;ihOpt()}
 function ihLeave(){try{IR&&IR.leave()}catch(e){}IR=null;IHOST=0;IG=null;IKEY='';clearTimeout(IFT)}
@@ -322,12 +375,14 @@ function ihCopy(){try{navigator.clipboard.writeText(ICODE.toUpperCase())}catch(e
 async function ihCreate(){
   IN=$('ihn').value.trim().slice(0,12)||'اللاعب';
   const a='abcdefghjkmnpqrstuvwxyz23456789';ICODE='';for(let i=0;i<5;i++)ICODE+=a[Math.floor(Math.random()*a.length)];
-  const R=await getRoom();if(!R){$('ihmsg').textContent='الأونلاين يحتاج تسجيل الدخول ومشاركة الرابط معك.';return}
-  try{IR=await R.join('ih'+ICODE)}catch(e){$('ihmsg').textContent='تعذّر إنشاء الغرفة';return}
-  IHOST=1;IMY='H';IKEY='';IG={ph:'lobby',pl:[{id:'H',name:IN,sc:0}],round:0,total:ITOT,dur:IDUR,letter:'',used:'',ans:{},inv:{},ch:'H',by:''};
+  const R=await getRoom();if(!R){$('ihmsg').textContent='تعذّر الاتصال بخدمة الأونلاين، تأكد من الإنترنت.';return}
+  try{IR=await R.join('ih'+ICODE,{host:true})}catch(e){$('ihmsg').textContent='تعذّر إنشاء الغرفة';return}
+  IHOST=1;IMY='H';IKEY='';IG={ph:'lobby',pl:[{id:'H',name:IN,sc:0}],round:0,total:ITOT,dur:IDUR,letter:'',used:'',ans:{},inv:{},vc:{},rd:[],mt:0,stk:'L0',ch:'H',by:''};
   IR.presence({role:'host',code:ICODE,g:IG});IR.onPeers(ihPeers);show('ih');ihRender()
 }
-function ihPub(){if(IHOST&&IR)IR.presence({g:IG}).catch(()=>{});ihRender()}
+function ihStk(){return IG.ph=='lobby'?'L'+IG.mt:IG.ph=='review'?'R'+IG.round:IG.ph=='end'?'E'+IG.mt:''}
+function ihTrig(){ihPeers({joined:[],updated:[{isMe:false}],left:[]})}
+function ihPub(){if(IHOST)IG.stk=ihStk();if(IHOST&&IR)IR.presence({g:IG}).catch(()=>{});ihRender()}
 function ihPeers(ch){
   if(!IHOST||!ch||![...ch.joined,...ch.updated,...ch.left].some(p=>!p.isMe))return;
   const ps=IR.peers().filter(p=>!p.isMe&&p.presence.role=='P'&&p.presence.name!==undefined).sort((x,y)=>x.peer<y.peer?-1:1).slice(0,7);
@@ -337,34 +392,41 @@ function ihPeers(ch){
   if(IG.ph=='pick'){const c=ps.find(p=>p.peer==IG.ch),pk=c&&c.presence.pick;if(pk){const k=c.peer+'|'+pk.n;if(k!==ILK){ILK=k;ihChoose(pk.l)}}}
   if(IG.ph=='write'){const s=ps.find(p=>p.presence.stop===IG.round);if(s)ihStop(s.peer)}
   if(IG.ph=='collect'&&IG.pl.every(p=>p.id=='H'||ps.some(x=>x.peer==p.id&&x.presence.fin===IG.round)))ihFinish();
+  IG.stk=ihStk();
+  const rdy=p=>p.id=='H'?IRdy===IG.stk:((ps.find(x=>x.peer==p.id)||{presence:{}}).presence.rdy===IG.stk);
+  IG.rd=IG.stk?IG.pl.filter(rdy).map(p=>p.id):[];
+  if(IG.ph=='review'){const vc={},oth=IG.pl.length-1,ok=k=>/^[^|]+\|[0-4]$/.test(k)&&IG.pl.some(p=>p.id==k.split('|')[0]),add=(id,vt)=>(Array.isArray(vt)?vt.slice(0,40):[]).forEach(k=>{if(typeof k=='string'&&ok(k)&&k.split('|')[0]!=id)vc[k]=(vc[k]||0)+1});
+    add('H',IVT);ps.forEach(p=>add(p.peer,p.presence.vt));IG.vc=vc;IG.inv={};Object.keys(vc).forEach(k=>{if(vc[k]*2>oth)IG.inv[k]=1})}
+  if(IG.stk&&IG.pl.length>=2&&IG.rd.length==IG.pl.length){if(IG.ph=='lobby')ihStart();else if(IG.ph=='review')ihNext();else ihAgain();return}
   ihPub()
 }
-function ihStart(){if(IG.pl.length<2)return;IG.round=1;IG.ch=IG.pl[0].id;IG.ph='pick';IG.used='';IG.letter='';IG.pl.forEach(p=>p.sc=0);ihPub()}
+function ihStart(){if(IG.pl.length<2)return;IG.round=1;IG.ch=IG.pl[0].id;IG.ph='pick';IG.used='';IG.letter='';IG.pl.forEach(p=>p.sc=0);IG.rd=[];ihPub()}
 function ihPick(l){if(IHOST)ihChoose(l);else IR.presence({pick:{l:l,n:Date.now()}})}
 function ihChoose(l){if(!ILET.includes(l)||IG.used.includes(l)||IG.ph!='pick')return;IG.letter=l;IG.used+=l;IG.ph='write';IG.ans={};IG.inv={};ihPub()}
 function ihStop(by){if(IG.ph!='write')return;IG.ph='collect';IG.by=by;ihPub();IFT=setTimeout(ihFinish,2500)}
 function ihFinish(){if(IG.ph!='collect')return;clearTimeout(IFT);const ps=IR.peers().filter(p=>!p.isMe);IG.ans={};IG.pl.forEach(p=>{const a=p.id=='H'?IHA:((ps.find(x=>x.peer==p.id)||{presence:{}}).presence.ans||[]);IG.ans[p.id]=[0,1,2,3,4].map(i=>String(a[i]||'').slice(0,14))});IG.inv={};IG.ph='review';ihPub()}
-function ihTog(i,k){if(!IHOST||IG.ph!='review')return;const key=IG.pl[i].id+'|'+k;if(IG.inv[key])delete IG.inv[key];else IG.inv[key]=1;ihPub()}
+function ihVote(i,k){if(!IG||IG.ph!='review')return;const o=IG.pl[i].id;if(o==IMY)return;const key=o+'|'+k,j=IVT.indexOf(key);if(j>=0)IVT.splice(j,1);else IVT.push(key);IKEY='';if(IHOST)ihTrig();else{IR.presence({vt:IVT});ihRender()}}
+function ihReady(){if(!IG||!IG.stk)return;IRdy=IG.stk;IKEY='';if(IHOST)ihTrig();else{IR.presence({rdy:IG.stk});ihRender()}}
 function ihPts(){const g=IG,pts={};g.pl.forEach(p=>pts[p.id]=[0,0,0,0,0]);
   for(let k=0;k<5;k++){const ok=p=>{const a=(g.ans[p.id]||[])[k];return ihOk(a,g.letter)&&!g.inv[p.id+'|'+k]},cnt={};
     g.pl.forEach(p=>{if(ok(p)){const n=ihNorm(g.ans[p.id][k]);cnt[n]=(cnt[n]||0)+1}});
     g.pl.forEach(p=>{if(ok(p))pts[p.id][k]=cnt[ihNorm(g.ans[p.id][k])]>1?5:10})}
   return pts}
-function ihNext(){if(!IHOST||IG.ph!='review')return;const pts=ihPts();IG.pl.forEach(p=>p.sc+=pts[p.id].reduce((a,b)=>a+b,0));
+function ihNext(){if(!IHOST||IG.ph!='review')return;IVT=[];const pts=ihPts();IG.pl.forEach(p=>p.sc+=pts[p.id].reduce((a,b)=>a+b,0));
   if(IG.round>=IG.total)IG.ph='end';else{IG.round++;IG.ch=IG.pl[(IG.round-1)%IG.pl.length].id;IG.ph='pick';IG.ans={};IG.inv={};IG.letter=''}ihPub()}
-function ihAgain(){IG.ph='lobby';IG.round=0;IG.used='';IG.letter='';IG.pl.forEach(p=>p.sc=0);ihPub()}
+function ihAgain(){IG.ph='lobby';IG.mt++;IG.round=0;IG.used='';IG.letter='';IG.rd=[];IG.pl.forEach(p=>p.sc=0);ihPub()}
 function ihIn(el){IAns[+el.dataset.i]=el.value.slice(0,14);if(!IHOST){clearTimeout(IDB);IDB=setTimeout(()=>IR&&IR.presence({ans:IAns}),350)}$('ihS').disabled=!IAns.every(x=>x.trim())}
 function ihStopBtn(){if(!IAns.every(x=>x.trim()))return;if(IHOST){IHA=IAns;ihStop('H')}else IR.presence({ans:IAns,stop:IG.round})}
 async function ihJoin(){
   IN=$('ihn').value.trim().slice(0,12)||'لاعب';ICODE=$('ihc').value.trim().toLowerCase();if(ICODE.length<4){$('ihmsg').textContent='اكتب رمز الغرفة';return}
-  $('ihmsg').textContent='جارٍ البحث…';const R=await getRoom();if(!R){$('ihmsg').textContent='الأونلاين يحتاج تسجيل الدخول ومشاركة الرابط معك.';return}
-  try{IR=await R.join('ih'+ICODE)}catch(e){$('ihmsg').textContent='تعذّر الدخول للغرفة';return}
+  $('ihmsg').textContent='جارٍ البحث…';const R=await getRoom();if(!R){$('ihmsg').textContent='تعذّر الاتصال بخدمة الأونلاين، تأكد من الإنترنت.';return}
+  try{IR=await R.join('ih'+ICODE)}catch(e){$('ihmsg').textContent=e&&e.type=='peer-unavailable'?'لا توجد غرفة بهذا الرمز':'تعذّر الدخول للغرفة';return}
   IHOST=0;IG=null;IKEY='';IFin=0;IR.presence({role:'P',name:IN,ans:['','','','',''],fin:0,stop:0});IR.onPeers(ihClient);
   setTimeout(()=>{if(!IG)$('ihmsg').textContent='لا توجد غرفة بهذا الرمز'},5000)
 }
 function ihClient(){
   if(!IR||IHOST)return;const h=IR.peers().find(p=>p.presence&&p.presence.role=='host'&&p.presence.code==ICODE);
-  if(!h||!h.presence.g){if(IG){ihLeave();show('home');$('hm').textContent='انتهت الغرفة أو غادر المقدّم'}return}
+  if(!h||!h.presence.g){if(IG){ihLeave();show('gm');$('gmm').textContent='انتهت الغرفة'}return}
   const me=IR.peers().find(p=>p.sameTab);IMY=me?me.peer:'';const first=!IG;IG=h.presence.g;
   if(IG.ph=='collect'&&IFin!==IG.round){IFin=IG.round;IR.presence({ans:IAns,fin:IG.round})}
   if(first)show('ih');ihRender()
@@ -373,17 +435,17 @@ function ihTick(){if(!IG||IG.ph!='write')return;const left=Math.max(0,IG.dur-Mat
 setInterval(ihTick,400);
 function ihRender(){
   const g=IG;if(!g)return;const b=$('ihb'),me=IMY,H=IHOST;
-  const key=g.ph+'|'+g.round+'|'+(g.ph=='write'||g.ph=='collect'?g.letter:JSON.stringify([g.pl,g.inv,g.ans,g.used,g.ch]));
+  const key=g.ph+'|'+g.round+'|'+(g.ph=='write'||g.ph=='collect'?g.letter:JSON.stringify([g.pl,g.inv,g.ans,g.used,g.ch,g.rd,g.vc,IRdy===g.stk,IVT]));
   if(key==IKEY)return;IKEY=key;
   const top='<div class="cap" style="font-size:14px">الجولة '+Math.max(1,g.round)+' من '+g.total+'</div>';
-  if(g.ph=='lobby'){b.innerHTML='<div class="lbl">رمز الغرفة</div><div class="code">'+esc(ICODE.toUpperCase())+'</div><button class="chip" onclick="ihCopy()">نسخ الرمز</button><div style="margin-top:12px">'+g.pl.map(p=>'<div class="lr"><span>'+esc(p.name)+(p.id==me?' (أنت)':'')+'</span></div>').join('')+'</div>'+(H?'<button class="btn go" style="width:100%;margin-top:8px"'+(g.pl.length<2?' disabled':'')+' onclick="ihStart()">ابدأ اللعبة ('+g.total+' جولات)</button>':'')+'<div class="cap">'+(H?'يلزم لاعبان على الأقل':'بانتظار المقدّم…')+'</div>'}
+  if(g.ph=='lobby'){b.innerHTML='<div class="lbl">رمز الغرفة</div><div class="code">'+esc(ICODE.toUpperCase())+'</div><button class="chip" onclick="ihCopy()">نسخ الرمز</button><div style="margin-top:12px">'+g.pl.map(p=>'<div class="lr"><span>'+esc(p.name)+(p.id==me?' (أنت)':'')+(g.rd.includes(p.id)?' — جاهز':'')+'</span></div>').join('')+'</div>'+'<button class="btn go" style="width:100%;margin-top:8px"'+(g.pl.length<2||IRdy===g.stk?' disabled':'')+' onclick="ihReady()">'+(IRdy===g.stk?'بانتظار الباقين…':'جاهز ('+g.total+' جولات)')+'</button><div class="cap">'+(g.pl.length<2?'يلزم لاعبان على الأقل':'تبدأ اللعبة لما يكون الجميع جاهزين — جاهزون '+g.rd.length+' من '+g.pl.length)+'</div>'}
   else if(g.ph=='pick'){const c=g.pl.find(p=>p.id==g.ch)||g.pl[0];b.innerHTML=top+(c.id==me?'<div class="lbl">دورك: اختر حرفًا</div><div class="lg2">'+[...ILET].map(l=>'<button class="chip"'+(g.used.includes(l)?' disabled':'')+' onclick="ihPick(\''+l+'\')">'+l+'</button>').join('')+'</div>':'<div class="cap" style="font-size:18px;margin:20px 0">'+esc(c.name)+' يختار الحرف…</div>')}
-  else if(g.ph=='write'){IT0=Date.now();IAns=['','','','',''];IHA=IAns;b.innerHTML=top+'<div class="code" style="font-size:64px">'+esc(g.letter)+'</div><div id="ihT" class="cap" style="font-size:20px"></div>'+ICAT.map((c,i)=>'<div class="lbl">'+c+'</div><input class="ai" maxlength="14" data-i="'+i+'" oninput="ihIn(this)" autocomplete="off">').join('')+'<button class="btn go" id="ihS" style="width:100%;margin-top:10px" disabled onclick="ihStopBtn()">ستوب</button>'}
+  else if(g.ph=='write'){IT0=Date.now();IAns=['','','','',''];IHA=IAns;IVT=[];if(!IHOST&&IR)IR.presence({vt:[]});b.innerHTML=top+'<div class="code" style="font-size:64px">'+esc(g.letter)+'</div><div id="ihT" class="cap" style="font-size:20px"></div>'+ICAT.map((c,i)=>'<div class="lbl">'+c+'</div><input class="ai" maxlength="14" data-i="'+i+'" oninput="ihIn(this)" autocomplete="off">').join('')+'<button class="btn go" id="ihS" style="width:100%;margin-top:10px" disabled onclick="ihStopBtn()">ستوب</button>'}
   else if(g.ph=='collect'){const s=g.pl.find(p=>p.id==g.by);b.innerHTML='<div class="cap" style="font-size:18px;margin:24px 0">'+(s?'ستوب من '+esc(s.name)+' — ':'انتهى الوقت — ')+'جارٍ جمع الإجابات…</div>'}
   else if(g.ph=='review'){const pts=ihPts();let t='<div class="code" style="font-size:44px">'+esc(g.letter)+'</div><div style="overflow-x:auto"><table class="ht"><tr><th></th>'+ICAT.map(c=>'<th>'+c+'</th>').join('')+'<th>المجموع</th></tr>';
-    g.pl.forEach((p,i)=>{const r=pts[p.id]||[0,0,0,0,0];t+='<tr><th>'+esc(p.name)+'</th>'+[0,1,2,3,4].map(k=>'<td class="'+(r[k]?'':'x')+'"'+(H?' onclick="ihTog('+i+','+k+')"':'')+'>'+esc((g.ans[p.id]||[])[k]||'—')+'<span class="p">'+r[k]+'</span></td>').join('')+'<td><b>'+(p.sc+r.reduce((x,y)=>x+y,0))+'</b></td></tr>'});
-    b.innerHTML=t+'</table></div><div class="cap">'+(H?'اضغط على أي إجابة لإلغائها أو إعادتها':'المقدّم يراجع الإجابات…')+'</div>'+(H?'<button class="btn go" style="width:100%" onclick="ihNext()">'+(g.round>=g.total?'عرض النتيجة':'الجولة التالية')+'</button>':'')}
-  else if(g.ph=='end'){const r=[...g.pl].sort((x,y)=>y.sc-x.sc);b.innerHTML='<div class="big" style="font-size:30px">'+esc(r[0].name)+' يفوز!</div>'+r.map((p,i)=>'<div class="lr"><span>'+(i+1)+'. '+esc(p.name)+'</span><b>'+p.sc+'</b></div>').join('')+(H?'<button class="btn go" style="width:100%;margin-top:10px" onclick="ihAgain()">مباراة جديدة</button>':'');confetti()}
+    g.pl.forEach((p,i)=>{const r=pts[p.id]||[0,0,0,0,0];t+='<tr><th>'+esc(p.name)+'</th>'+[0,1,2,3,4].map(k=>'<td class="'+(r[k]?'':'x')+'"'+(p.id!=me?' onclick="ihVote('+i+','+k+')"':'')+(IVT.includes(p.id+'|'+k)?' style="outline:2px solid var(--acc)"':'')+'>'+esc((g.ans[p.id]||[])[k]||'—')+'<span class="p">'+r[k]+(g.vc[p.id+'|'+k]?' ⚑'+g.vc[p.id+'|'+k]:'')+'</span></td>').join('')+'<td><b>'+(p.sc+r.reduce((x,y)=>x+y,0))+'</b></td></tr>'});
+    b.innerHTML=t+'</table></div><div class="cap">اضغط على إجابة لاعب آخر إن كانت غير صحيحة؛ تُلغى إذا وافقت أغلبية اللاعبين (⚑ = عدد الاعتراضات)</div><button class="btn go" style="width:100%"'+(IRdy===g.stk?' disabled':'')+' onclick="ihReady()">'+(IRdy===g.stk?'بانتظار الباقين ('+g.rd.length+'/'+g.pl.length+')…':(g.round>=g.total?'جاهز لعرض النتيجة':'جاهز للجولة التالية'))+'</button>'}
+  else if(g.ph=='end'){const r=[...g.pl].sort((x,y)=>y.sc-x.sc);b.innerHTML='<div class="big" style="font-size:30px">'+esc(r[0].name)+' يفوز!</div>'+r.map((p,i)=>'<div class="lr"><span>'+(i+1)+'. '+esc(p.name)+'</span><b>'+p.sc+'</b></div>').join('')+'<button class="btn go" style="width:100%;margin-top:10px"'+(IRdy===g.stk?' disabled':'')+' onclick="ihReady()">'+(IRdy===g.stk?'بانتظار الباقين…':'العب مجددًا')+'</button>';confetti()}
 }
 let fi,rwin=null;
 
@@ -426,5 +488,5 @@ function win(t){
       if(owner[j]==t&&!seen.has(j)){seen.add(j);st.push(j)}}}
   return false;
 }
-setTheme(0);chips();show('home');openWelcome();
+setTheme(0);chips();show('gm');openWelcome();
 </script></body></html>
